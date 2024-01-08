@@ -193,3 +193,9 @@ footer{
   bottom: 3vh;
   
 }
+@media (max-width: 600px) {
+  #container {
+    width: 90%;
+    max-width: none;
+  }
+}
