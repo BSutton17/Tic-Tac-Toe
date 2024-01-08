@@ -1,0 +1,194 @@
+/* Define a CSS variable for white color */
+:root {
+  --white: #FEF3F0;
+  --green: #9DAE7D;
+  --pink: #F6BBBE;
+  --orange: #C56742;
+  --dark: #49373B;
+}
+
+/* Body styling */
+body {
+  background-color: #49373B;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FEF3F0;
+}
+#wrapper{
+  text-align: center;
+  position: absolute;
+  height: 475px;
+  top: 15%;
+  left:0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+#welcome{
+  position: relative;
+  top: 0;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p{
+  font-size: 25px;
+}
+ul{
+  list-style-type: none;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 25%;
+}
+
+li{
+  margin-bottom: 25%;
+  padding: 10px;
+  background-color: var(--orange);
+  border-radius: 5%;
+}
+
+#si, #mu{
+  display: block;
+  font-size: large;
+  text-align: center;
+  color: var(--green);
+  height: 25%;
+}
+/* Heading 1 styling */
+h1 {
+  position: absolute;
+  top: 3%;
+}
+
+/* Display styling */
+#display {
+  position: absolute;
+  top: 15%;
+  font-size: 250%;
+}
+
+/* Container styling using CSS Grid */
+#container {
+  position: relative;
+  width: 470px;
+  height: 380px;
+  display: grid;
+  background-color: transparent;
+  grid-template-areas: 
+    "top-left top-mid top-right"
+    "mid-left middle mid-right"
+    "bottom-left bottom-middle bottom-right";
+}
+
+/* Button styling */
+.btn {
+  background-color: transparent;
+  color: #9DAE7D;
+  border: 2px solid white;
+  border-radius: 0px;
+  font-display: absolute;
+  font-size: 300%;
+  min-width: 155px;
+  min-height: 125px;
+}
+
+/* Styling for specific grid areas */
+#top-left {
+  grid-area: top-left;
+  border-color: transparent var(--orange) var(--orange) transparent;
+}
+
+#top-mid {
+  grid-area: top-mid;
+  border-color: transparent var(--orange);
+}
+
+#top-right {
+  grid-area: top-right;
+  border-color: transparent transparent var(--orange) var(--orange);
+}
+
+#mid-left {
+  grid-area: mid-left;
+  border-color: var(--orange) transparent;
+}
+
+#middle {
+  grid-area: middle;
+  border: 4px solid var(--orange);
+}
+
+#mid-right {
+  grid-area: mid-right;
+  border-color: var(--orange) transparent;
+}
+
+#bottom-left {
+  grid-area: bottom-left;
+  border-color: var(--orange) var(--orange) transparent transparent;
+}
+
+#bottom-mid {
+  grid-area: bottom-middle;
+  border-color: transparent var(--orange);
+}
+
+#bottom-right {
+  grid-area: bottom-right;
+  border-color: var(--orange) transparent transparent var(--orange);
+}
+
+/* Remove outline on button focus */
+.btn:focus{
+  outline: none !important;
+}
+
+.reset:hover, .Link-B:hover{
+  border: var(--white);
+  color: var(--dark);
+}
+
+#reset, #back{
+  position: absolute;
+  bottom: 75px;
+  height: 75px;
+  width: 100px;
+  font-size: large;
+  color: var(--dark);
+  background-color: var(--pink);
+}
+
+#back{
+  margin-left: 375px;
+}
+
+.Link-B{
+  color: var(--dark);
+}
+
+footer{
+  color: grey;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#Home{
+  bottom: -30%;
+}
+
+#F-Single, #F-Multi{
+  bottom: 3%;
+  
+}
