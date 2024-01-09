@@ -24,9 +24,8 @@ function App() {
   let rand = Math.floor(Math.random() * (max - min + 1) + min);
   useEffect(() => {
     checkWinner();
-  }, [count]);
+  }, [count, tLeft, tMid, tRight, mLeft, mMid, mRight, bLeft, bMid, bRight]);
 
-  
   // Array of valid moves
   let valid = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -169,37 +168,37 @@ function App() {
       case tLeft === "X" && tMid === "X" && tRight === "X":
       case mLeft === "X" && mMid === "X" && mRight === "X":
       case bLeft === "X" && bMid === "X" && bRight === "X":
-        winnerMessage = "X is the Winner!";
+        winnerMessage = "You Win";
         break;
 
       case tLeft === "O" && tMid === "O" && tRight === "O":
       case mLeft === "O" && mMid === "O" && mRight === "O":
       case bLeft === "O" && bMid === "O" && bRight === "O":
-        winnerMessage = "O is the Winner!";
+        winnerMessage = "You Lose";
         break;
 
       // Columns
       case tLeft === "X" && mLeft === "X" && bLeft === "X":
       case tMid === "X" && mMid === "X" && bMid === "X":
       case tRight === "X" && mRight === "X" && bRight === "X":
-        winnerMessage = "X is the Winner!";
+        winnerMessage = "You Win";
         break;
 
       case tLeft === "O" && mLeft === "O" && bLeft === "O":
       case tMid === "O" && mMid === "O" && bMid === "O":
       case tRight === "O" && mRight === "O" && bRight === "O":
-        winnerMessage = "O is the Winner!";
+        winnerMessage = "You Lose";
         break;
 
       // Diagonals
       case tLeft === "X" && mMid === "X" && bRight === "X":
       case tRight === "X" && mMid === "X" && bLeft === "X":
-        winnerMessage = "X is the Winner!";
+        winnerMessage = "You Win";
         break;
 
       case tLeft === "O" && mMid === "O" && bRight === "O":
       case tRight === "O" && mMid === "O" && bLeft === "O":
-        winnerMessage = "O is the Winner!";
+        winnerMessage = "You Lose";
         break;
 
       // Draw
